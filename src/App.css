@@ -30,3 +30,67 @@
     transform: rotate(360deg);
   }
 }
+
+.menu {
+  position: absolute;
+  z-index:9999;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #cccccc;
+}
+
+.item {
+  padding: 2px 6px;
+  cursor: default;
+  background-color: white;
+}
+
+.item-highlighted {
+  color: white;
+  background-color: #4095bf;
+}
+
+.item-header {
+  background-color: #eeeeee;
+  color: #454545;
+  font-weight: bold;
+}
+
+.result-btn-group {
+  margin: 20px auto;
+}
+
+.th {
+  text-overflow:ellipsis;
+  word-break:keep-all; 
+  white-space:nowrap;
+}
+
+#map {
+  height: 400px;  
+  width: 100%;
+  margin-top: 20px;
+ }
+
+ .imgli {
+  list-style: none;
+  float: left;
+  width: 33.3%;
+  padding: 10px;
+  height: 300px;/*当图片尺寸不一的时候，设置一个高度*/
+    overflow: hidden;
+}
+
+ .liimg {
+  width: 100%;
+}
+
+.clearfix:after{
+  position: relative;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}

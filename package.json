@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cors": "^2.8.5",
+    "google-map-react": "^1.1.2",
     "react": "^16.6.3",
+    "react-autocomplete": "^1.8.1",
+    "react-bootstrap": "^0.32.4",
+    "react-circular-progressbar": "^1.0.0",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "spotify-web-api-node": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
