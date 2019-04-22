@@ -49,7 +49,7 @@ export default class ResultPage extends Component {
       if (response.ok) {
         response.json().then(function (resultlist) {
           try {
-            console.log("get upcoming events");
+            // console.log("get upcoming events");
             if (resultlist.resultsPage.totalEntries > 0) {
               var venueID = resultlist.resultsPage.results.venue[0].id;
               var eventurl = eventsbaseurl + venueID + "/calendar.json?" + apikey;
@@ -95,7 +95,6 @@ export default class ResultPage extends Component {
                   })
                 } else {
                   // deal error
-                  console.log("fuck");
                   component.handleError();
                 }
               }
@@ -122,7 +121,6 @@ export default class ResultPage extends Component {
         })
       } else {
         // deal error
-        console.log("fuck");
         component.handleError();
       }
     }
@@ -147,8 +145,8 @@ export default class ResultPage extends Component {
   getArtist(artist) {
     var component = this;
     fetch(artisturl, {
-      body: JSON.stringify({name:artist}),
-      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ name: artist }),
+      headers: { 'Content-Type': 'application/json' },
       method: 'POST',
       mode: 'cors',
     }).then(function (response) {
@@ -183,7 +181,6 @@ export default class ResultPage extends Component {
         })
       } else {
         // deal error
-        console.log("fuck");
         artistlist.push({ name: null, follwers: null, popularity: null, check: null });
         component.setState({
           artistlist: artistlist
@@ -234,7 +231,6 @@ export default class ResultPage extends Component {
         })
       } else {
         // deal error
-        console.log("fuck");
         imglist.push({ name: artist, img: null });
         component.setState({
           imagelist: imglist
@@ -303,19 +299,19 @@ export default class ResultPage extends Component {
         </div>
         <div>
 
-          <button type="button" className="btn btn-light border col-1" onClick={() => {
+          <button type="button" className="btn btn-light border" onClick={() => {
             this.onBackClick()
           }}><i className="material-icons" style={{ verticalAlign: "middle" }}>
               keyboard_arrow_left
                 </i> List</button>
-          <img src={twitter} alt="twitter" height="50dp" width="60dp" className="btn btn-xs img-rounded offset-9" onClick={() => {
-            this.onBackClick()
-          }} />
-          <button type="button" className="btn btn-light border" onClick={() => {
-            this.onFavClick()
-          }}><i className="material-icons" style={this.props.res.isFav ? { verticalAlign: "middle", color: "yellow" } : { verticalAlign: "middle" }}>
-              {this.props.res.isFav ? "star" : "star_border"}
-            </i></button>
+            <img src={twitter} alt="twitter" height="50dp" width="60dp" style={{float: "right"}} className="btn btn-xs img-rounded" onClick={() => {
+              this.onBackClick()
+            }} />
+            <button type="button" className="btn btn-light border" style={{ float: "right", height:"50px"}} onClick={() => {
+              this.onFavClick()
+            }}><i className="material-icons" style={this.props.res.isFav ? { verticalAlign: "middle", color: "yellow" } : { verticalAlign: "middle" }}>
+                {this.props.res.isFav ? "star" : "star_border"}
+              </i></button>
         </div>
         <div className="row col-12">
           <Nav

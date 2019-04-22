@@ -53,7 +53,7 @@ export default class Artist extends Component {
                                 null
                             }
                                 {
-                                    item.name !== null ?
+                                    item.name !== null && item.follwers != 0 ?
                                         <table className="table table-striped">
                                             <tbody>
                                                 <tr>

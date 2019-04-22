@@ -55,7 +55,7 @@ class App extends Component {
     return (
       <div className="container">
         <Form form={this.getFormRes.bind(this)} />
-        <div className="result-btn-group col-3">
+        <div className="result-btn-group col-12" style={{textAlign:"center"}}>
           <div className="btn-group" role="group" aria-label="Basic example">
             <button type="button" name="res" className={this.state.resListBtnClass} onClick={(e) => { this.onBtnGroupClick(e) }}>Results</button>
             <button type="button" name="fav" className={this.state.favListBtnClass} onClick={(e) => { this.onBtnGroupClick(e) }}>Favorites</button>

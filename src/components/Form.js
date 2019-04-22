@@ -189,11 +189,11 @@ export default class Form extends Component {
     return (
       <div className="card" style={{marginTop:"20px"}}>
       <div className="card-header">
-      <div className="form-group col-6 offset-3">
-      <h2>Entertainment Event Ticket Search</h2>
+      <div style={{textAlign:"center"}}>
+      <h2 width="100%">Entertainment Event Ticket Search</h2>
       </div>
       <div className="row">
-      <form className="form-horizontal col-8" style={{margin:"auto auto"}}>
+      <form className="form-horizontal" style={{margin:"auto auto"}}>
         <div className="form-group row">
         <div className="col-3">
             <label htmlFor="keyword">Keyword <font color='red'>*</font></label>
@@ -326,7 +326,7 @@ export default class Form extends Component {
                 search
                 </i> Search</button>
             </div>
-            <div className="col-2">
+            <div className="col-2 offset-1">
                 <button type="reset" className="btn btn-light border" onClick={() => {
                     this.clearForm()
                 }}><i className="material-icons" style={{verticalAlign: "middle"}}>

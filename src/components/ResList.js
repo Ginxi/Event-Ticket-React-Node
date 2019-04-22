@@ -44,7 +44,7 @@ export default class ResList extends Component {
   }
 
   getResList() {
-    console.log("get list");
+    // console.log("get list");
     var component = this;
     if (this.props.form.isCurloc) {
       const currentPosUrl = "https://ipapi.co/json";
@@ -141,7 +141,6 @@ export default class ResList extends Component {
                   })
                 } else {
                   // deal error
-                  console.log("fuck");
                   component.handleError();
                 }
               }
@@ -163,7 +162,6 @@ export default class ResList extends Component {
         } else {
           // deal error
           component.handleError();
-          console.log("fuck");
         }
       }
       ).catch((e) => {
@@ -267,7 +265,6 @@ export default class ResList extends Component {
                   })
                 } else {
                   // deal error
-                  console.log("fuck");
                   component.handleError();
                 }
               }
@@ -288,7 +285,6 @@ export default class ResList extends Component {
           })
         } else {
           // deal error
-          console.log("fuck");
           component.handleError();
         }
       }

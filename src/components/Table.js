@@ -149,7 +149,7 @@ export default class Table extends Component {
             this.state.hasRecords ?
               <div>
                 <div style={{ textAlign: "right", marginBottom: "20px" }}>
-                  <button type="button" className="btn btn-light border col-1" disabled={this.state.currentID === ""} onClick={() => {
+                  <button type="button" className="btn btn-light border" disabled={this.state.currentID === ""} onClick={() => {
                     this.onDetailClick()
                   }}>Details <i className="material-icons" style={{ verticalAlign: "middle" }}>
                       keyboard_arrow_right
